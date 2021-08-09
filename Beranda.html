@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ruang Belajar Jatim</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body{
+      background-image: url("image/background.jpg");
+      background-color: #D8DCCD;
+      background-repeat: no-repeat;
+      background-size:cover
+  }
+  #font{
+      color: #D8DCCD;
+      font-size: 20px;
+      font-style : normal; }
+      .box{
+  margin: 100px auto;
+  width: 300px;
+  height: 50px;
+}
+  
+  </style>
+</head>
+<body>
+    <div class="container">                 
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Beranda.html">Beranda</a></li>
+        <li><a href="#">Layanan</a></li>
+        <li><a href="#">Tentang</a></li>
+        <li><a href="#">Account</a></li>        
+        </ul>
+  </div>
+  <div class="text-center"><br><br><br><br><br><br><br>
+    <h1 class="display-4">Ruang Belajar Jatim</h1>
+  </div>
+  <form class="navbar-form text-center">
+    <div class="form-group">
+      <input type="text" class="form-control" width=150px placeholder="Search" >
+    <div class="dropdown">
+    <button class="btn btn-danger" type="button" data-toggle="dropdown">Temukan
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <li><a href="#">SMAN 1 SURABAYA</a></li>
+    <li><a href="#">SMAN 1 MOJOKERTO</a></li>
+    <li><a href="#">SMAN 1 JOMBANG</a></li>
+    <li><a href="#">SMAN 2 SURABAYA</a></li>
+    <li><a href="#">SMAN 2 MOJOKERTO</a></li>
+    <li><a href="#">SMAN 2 JOMBANG</a></li>
+    <li><a href="#">SMAN 3 SURABAYA</a></li>
+    <li><a href="#">SMAN 3 MOJOKERTO</a></li>
+    <li><a href="#">SMAN 3 JOMBANG</a></li>
+    <li><a href="#">SMAN 5 SURABAYA</a></li>
+    <li><a href="#">SMAN 5 MOJOKERTO</a></li>
+    <li><a href="#">SMAN 5 JOMBANG</a></li>
+     </ul>
+  </div>
+    </div>
+    
+    <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $(".dropdown-menu li").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
+
+  </form>
+</body>
+</html>
